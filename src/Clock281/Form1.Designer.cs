@@ -58,6 +58,7 @@
             this.btn_LEFT = new System.Windows.Forms.Button();
             this.btn_RIGHT = new System.Windows.Forms.Button();
             this.p_Resize = new System.Windows.Forms.Panel();
+            this.menu_recordMode = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.p_Resize.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             this.menu_font,
             this.toolStripSeparator4,
             this.menu_defult,
+            this.menu_recordMode,
             this.menu_CountDownMode,
             this.toolStripSeparator2,
             this.aboutClock281,
@@ -99,7 +101,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.ShowCheckMargin = true;
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 270);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 314);
             // 
             // menu_str2
             // 
@@ -188,7 +190,7 @@
             // menu_ReCountDown
             // 
             this.menu_ReCountDown.Name = "menu_ReCountDown";
-            this.menu_ReCountDown.Size = new System.Drawing.Size(148, 22);
+            this.menu_ReCountDown.Size = new System.Drawing.Size(152, 22);
             this.menu_ReCountDown.Text = "重新计时";
             this.menu_ReCountDown.Click += new System.EventHandler(this.menu_ReCountDown_Click);
             // 
@@ -200,7 +202,7 @@
             this.分ToolStripMenuItem1,
             this.分ToolStripMenuItem2});
             this.menu_SetCountTime.Name = "menu_SetCountTime";
-            this.menu_SetCountTime.Size = new System.Drawing.Size(148, 22);
+            this.menu_SetCountTime.Size = new System.Drawing.Size(152, 22);
             this.menu_SetCountTime.Text = "设置计时数量";
             this.menu_SetCountTime.Click += new System.EventHandler(this.menu_SetCountTime_Click);
             // 
@@ -310,6 +312,13 @@
             this.p_Resize.TabIndex = 5;
             this.p_Resize.Visible = false;
             // 
+            // menu_recordMode
+            // 
+            this.menu_recordMode.Name = "menu_recordMode";
+            this.menu_recordMode.Size = new System.Drawing.Size(258, 22);
+            this.menu_recordMode.Text = "取证模式";
+            this.menu_recordMode.Click += new System.EventHandler(this.menu_recordMode_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -367,6 +376,7 @@
         private System.Windows.Forms.ToolStripMenuItem 分ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 分ToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem menu_str3;
+        private System.Windows.Forms.ToolStripMenuItem menu_recordMode;
     }
 }
 
