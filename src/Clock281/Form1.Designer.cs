@@ -42,6 +42,7 @@
             this.menu_font = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.menu_defult = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_recordMode = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_CountDownMode = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ReCountDown = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_SetCountTime = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@
             this.btn_LEFT = new System.Windows.Forms.Button();
             this.btn_RIGHT = new System.Windows.Forms.Button();
             this.p_Resize = new System.Windows.Forms.Panel();
-            this.menu_recordMode = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.p_Resize.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(330, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "0000-00-00  00:00:00";
+            this.label1.Text = "8888-88-88  88:88:88";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
@@ -101,7 +101,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.ShowCheckMargin = true;
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 314);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 292);
             // 
             // menu_str2
             // 
@@ -176,6 +176,13 @@
             this.menu_defult.Size = new System.Drawing.Size(258, 22);
             this.menu_defult.Text = "默认设置";
             this.menu_defult.Click += new System.EventHandler(this.menu_defult_Click);
+            // 
+            // menu_recordMode
+            // 
+            this.menu_recordMode.Name = "menu_recordMode";
+            this.menu_recordMode.Size = new System.Drawing.Size(258, 22);
+            this.menu_recordMode.Text = "取证模式";
+            this.menu_recordMode.Click += new System.EventHandler(this.menu_recordMode_Click);
             // 
             // menu_CountDownMode
             // 
@@ -311,13 +318,6 @@
             this.p_Resize.Size = new System.Drawing.Size(51, 45);
             this.p_Resize.TabIndex = 5;
             this.p_Resize.Visible = false;
-            // 
-            // menu_recordMode
-            // 
-            this.menu_recordMode.Name = "menu_recordMode";
-            this.menu_recordMode.Size = new System.Drawing.Size(258, 22);
-            this.menu_recordMode.Text = "取证模式";
-            this.menu_recordMode.Click += new System.EventHandler(this.menu_recordMode_Click);
             // 
             // Form1
             // 

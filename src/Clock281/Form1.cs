@@ -50,6 +50,20 @@ namespace Clock281
                 {
                     tsp = tsp.Add(TimeSpan.FromSeconds(-1));
                 }
+                else
+                {
+                    timer1.Stop();
+                    try
+                    {
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer(Application.StartupPath + @"./ALARM.wav");
+                        player.PlaySync();
+                        player.Play();
+                    }
+                    catch (System.IO.FileNotFoundException err)
+                    {
+                        MessageBox.Show("倒计时时间已到", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
                 label1.Text = tsp.ToString();
             }
 
@@ -238,12 +252,13 @@ namespace Clock281
 
         private void aboutClock281_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Clock 281\r\n\r\n1.用键盘的上下左右来调整大小，鼠标拖动来调整位置。\r\n\r\n2.右键点击出现菜单，可以进一步调整样式。\r\n\r\n3.作者：ShenJian@281 日期:2013-10-18\r\n2017年5月14日新增取证模式", "关于本程序 Clock281 v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Clock 281\r\n\r\n1.用键盘的上下左右来调整大小，鼠标拖动来调整位置。\r\n\r\n2.右键点击出现菜单，可以进一步调整样式。\r\n\r\n3.作者：ShenJian@281 日期:2013-10-18\r\n2017年5月14日新增取证模式\r\n2018年3月22日倒计时结束播放声音", "关于本程序 Clock281 v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void menu_refresh_Click(object sender, EventArgs e)
         {
             makeLabelFix();
+            timer1.Start();
         }
 
         private void menu_Color_Click(object sender, EventArgs e)
@@ -284,6 +299,7 @@ namespace Clock281
             fontFamliyName = "华文中宋";
             this.label1.ForeColor = defultColor;
             this.Size = new Size(1280, 145);
+            timer1.Start();
         }
         private void menu_recordMode_Click(object sender, EventArgs e)
         {
@@ -306,6 +322,7 @@ namespace Clock281
             {
                 menu_CountDownMode.Checked = true;
             }
+            timer1.Start();
         }
 
         private void menu_SetCountTime_Click(object sender, EventArgs e)
@@ -320,6 +337,7 @@ namespace Clock281
         private void menu_ReCountDown_Click(object sender, EventArgs e)
         {
             tsp = tsp_set;
+            timer1.Start();  
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
